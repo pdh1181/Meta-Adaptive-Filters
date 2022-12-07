@@ -22,22 +22,7 @@ The zoo has sub-directories for each of these tasks: `aec`, `eq`, `wpe`, and `gs
 
 The `aec` task and sub-directory has `aec.py`, `aec_baselines.py`, and `aec_eval.py` files. The first constains the filter defitions, dataset, and is the entry point for training a model. The second file is used to tune baselines and produces a tuned baseline checkpoint. The third file is used for evaluation and uses checkpoints produced from the first or second files. As seen below, all tasks have these same three files. The `aec` module contains two extra baselines, a Kalman filter, and Speex whereas the `wpe` module only has the NARA-WPE baseline. The additional `metrics.py` contains implementations or wrappers of common metrics such as SNR, SRR, SI-SDR, STOI, and their segmental variations.
 
-## Extension Zoo Structure
 
-We incldue code for extensions to `metaaf` in the zoo folder.
-
-"[Meta-Learning for Adaptive Filters with Higher-Order Frequency Dependencies](https://arxiv.org/abs/2209.09955)", [Junkai Wu](https://www.linkedin.com/in/junkai-wu-19015b198/), [Jonah Casebeer](https://jmcasebeer.github.io), [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/), and [Paris Smaragdis](https://paris.cs.illinois.edu/), IWAENC, 2022.
-
-[Code location](hometa_aec/README.md):
-
-```BibTex
-@article{wu2022metalearning,
-  title={Meta-Learning for Adaptive Filters with Higher-Order Frequency Dependencies},
-  author={Wu, Junkai and Casebeer, Jonah and Bryan, Nicholas J. and Smaragdis, Paris},    
-  journal={arXiv preprint arXiv:2209.09955},
-  year={2022},
-}
-```
 
 ## Installation
 
