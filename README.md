@@ -1,23 +1,22 @@
 
 <div align="center">
 
-# Meta-AF: Meta-Learning for Adaptive Filters
+# Meta Learning in Adaptive Filters for Audio applications
 
-[Jonah Casebeer](https://jmcasebeer.github.io)<sup>1*</sup>, [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/)<sup>2</sup>, and [Paris Smaragdis](https://paris.cs.illinois.edu/)<sup>1</sup>
+[Sri Harsha Eedala]<sup>1</sup><sup>*</sup>
 
-<sup>1</sup> Department of Computer Science, University of Illinois at Urbana-Champaign<br>
-<sup>2</sup> Adobe Research, Lead advisor <br>
-<sup>*</sup>Work performed while an intern at Adobe Research
+<sup>1</sup> Department of Electrical and Computer Engineering,Arizona State University<br>
+
+<sup>*</sup>The implementation of this work is done as a part of class project
 </div>
 
-[![Demo Video](https://ccrma.stanford.edu/~njb/index_files/metaaf-video-2022.png)](https://youtu.be/incb1QNSvW8)
 
  <!-- START doctoc generated TOC please keep comment here to allow auto update -->
  <!-- doctoc --maxlevel 2 README.md -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Meta-AF: Meta-Learning for Adaptive Filters](#meta-af-meta-learning-for-adaptive-filters)
+- [Meta Learning in Adaptive Filters for Audio applications](#meta-af-meta-learning-for-adaptive-filters)
   - [Abstract](#abstract)
   - [Demos](#demos)
   - [Code](#code)
@@ -32,9 +31,7 @@
 Adaptive filtering algorithms are pervasive throughout signal processing and have had a material impact on a wide variety of domains including audio processing, telecommunications, biomedical sensing, astrophysics and cosmology, seismology, and many more. Adaptive filters typically operate via specialized online, iterative optimization methods such as least-mean squares or recursive least squares and aim to process signals in unknown or nonstationary environments. Such algorithms, however, can be slow and laborious to develop, require domain expertise to create, and necessitate mathematical insight for improvement. In this work, we seek to improve upon hand-derived adaptive filter algorithms and present a comprehensive framework for learning online, adaptive signal processing algorithms or update rules directly from data. To do so, we frame the development of adaptive filters as a meta-learning problem in the context of deep learning and use a form of self-supervision to learn online iterative update rules for adaptive filters. To demonstrate our approach, we focus on audio applications and systematically develop meta-learned adaptive filters for five canonical audio problems including system identification, acoustic echo cancellation, blind equalization, multi-channel dereverberation, and beamforming. We compare our approach against common baselines and/or recent state-of-the-art methods. We show we can learn high-performing adaptive filters that operate in real-time and, in most cases, significantly outperform each method we compare against -- all using a single general-purpose configuration of our approach.
 
 For more details, please see:
-"[Meta-AF: Meta-Learning for Adaptive Filters](https://arxiv.org/abs/2204.11942)", [Jonah Casebeer](https://jmcasebeer.github.io), [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/), and [Paris Smaragdis](https://paris.cs.illinois.edu/), arXiv, 2022. Or, our talk:
-
-[![Lecture Video](https://img.youtube.com/vi/iM2t5D2caBI/hqdefault.jpg)](https://youtu.be/iM2t5D2caBI)
+"[Meta-AF: Meta-Learning for Adaptive Filters](https://arxiv.org/abs/2204.11942)", [Jonah Casebeer](https://jmcasebeer.github.io), [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/), and [Paris Smaragdis](https://paris.cs.illinois.edu/), arXiv, 2022.
 
 If you use ideas or code from this work, please cite our paper:
 
@@ -268,32 +265,3 @@ The [Meta-AF Zoo](zoo/README.md) contains implementations for system identificat
 
 All core utility code within the `metaaf` folder is licensed via the [University of Illinois Open Source License](metaaf/LICENSE). All code within the `zoo` folder and model weights are licensed via the [Adobe Research License](zoo/LICENSE). Copyright (c) Adobe Systems Incorporated. All rights reserved.
 
-## Related Works
-
-An extension of this work using `metaaf` [here](zoo/hometa_aec/README.md):
-
-"[Meta-Learning for Adaptive Filters with Higher-Order Frequency Dependencies](https://arxiv.org/abs/2209.09955)", [Junkai Wu](https://www.linkedin.com/in/junkai-wu-19015b198/), [Jonah Casebeer](https://jmcasebeer.github.io), [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/), and [Paris Smaragdis](https://paris.cs.illinois.edu/), IWAENC, 2022.
-
-```BibTex
-@article{wu2022metalearning,
-  title={Meta-Learning for Adaptive Filters with Higher-Order Frequency Dependencies},
-  author={Wu, Junkai and Casebeer, Jonah and Bryan, Nicholas J. and Smaragdis, Paris},    
-  booktitle={IEEE International Workshop on Acoustic Signal Enhancement (IWAENC)},
-  year={2022},
-}
-```
-
-An early version of this work:
-
-"[Auto-DSP: Learning to Optimize Acoustic Echo Cancellers](https://arxiv.org/abs/2110.04284)", [Jonah Casebeer](https://jmcasebeer.github.io), [Nicholas J. Bryan](https://ccrma.stanford.edu/~njb/), and [Paris Smaragdis](https://paris.cs.illinois.edu/), WASPAA, 2021.
-
-```BibTex
-@inproceedings{casebeer2021auto,
-  title={Auto-DSP: Learning to Optimize Acoustic Echo Cancellers},
-  author={Casebeer, Jonah and Bryan, Nicholas J. and Smaragdis, Paris},
-  booktitle={2021 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},
-  pages={291--295},
-  year={2021},
-  organization={IEEE}
-}
-```
